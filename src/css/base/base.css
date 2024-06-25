@@ -1,0 +1,144 @@
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Inter Tight', sans-serif;
+}
+
+h1 {
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  h1 {
+    margin-top: 281px;
+    font-size: 50px;
+  }
+}
+
+h2,
+h4 {
+  color: rgba(250, 250, 250, 0.4);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-weight: 500;
+  color: rgba(250, 250, 250, 0.6);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+/* accent for text */
+.coral {
+  color: var(--accent-color);
+}
+
+.section {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+
+@media only screen and (max-width: 1439px) {
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* #region  arrows for benefits and projects*/
+.icon-arrow {
+  fill: none;
+}
+
+.icon-arrow-left,
+.icon-arrow-right {
+  stroke: rgba(250, 250, 250, 0.2);
+}
+.btn-arrow-right.active .icon-arrow-right,
+.btn-arrow-left.active .icon-arrow-left {
+  stroke: rgba(250, 250, 250, 0.5);
+}
+
+.btn-arrow-left,
+.btn-arrow-right {
+  background-color: transparent;
+  border: none;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+/* #endregion  */
+
+/* #region  common scroll*/
+.scroll-arrow-down {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 250ms ease-in-out;
+}
+
+.icon-arrow-down {
+  stroke: var(--transparent-grey);
+  fill: #21212198;
+  transition: stroke 250ms ease-in-out;
+}
+
+@media screen and (hover: hover) {
+  .icon-arrow-down:hover {
+    stroke: var(--white);
+  }
+}
+
+@media screen and not (hover: hover) {
+  .icon-arrow-down:active {
+    stroke: var(--white);
+  }
+}
+
+.up {
+  transform: rotate(180deg);
+}
+/* #endregion  */
